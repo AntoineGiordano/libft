@@ -1,38 +1,23 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   main.c                                           .::    .:/ .      .::   */
+/*   ft_putstrtab.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/03 17:41:29 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/22 19:24:26 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/11/13 18:56:42 by agiordan     #+#   ##    ##    #+#       */
+/*   Updated: 2018/11/13 19:15:36 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <libc.h>
+#include "libft.h"
 
-int	f(int a, int b)
+void	ft_putstrtab(char **tab, size_t length)
 {
-	return (a < b);
-}
+	size_t i;
 
-int		main(int ac, char **av)
-{
-	int tab[3] = {101, 42, 0};
-	printf("%i\n", tab[0]);
-	printf("%i\n", tab[1]);
-	printf("%i\n", tab[2]);
-	ft_sorttab(tab, 3, &f);
-	printf("%i\n", tab[0]);
-	printf("%i\n", tab[1]);
-	printf("%i\n", tab[2]);
-
-	return (0);
+	i = -1;
+	while (++i < length)
+		ft_putendl(tab[i]);
 }

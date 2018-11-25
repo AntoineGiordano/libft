@@ -3,10 +3,10 @@
 #                                                               /              #
 #    Makefile                                         .::    .:/ .      .::    #
 #                                                  +:+:+   +:    +:  +:+:+     #
-#    By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+      #
+#    By: mwaterso <mwaterso@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/10/03 17:31:01 by agiordan     #+#   ##    ##    #+#        #
-#    Updated: 2018/11/11 15:20:41 by agiordan    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/11/25 13:38:28 by mwaterso    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -54,11 +54,13 @@ FILE =	ft_memset.c \
 		ft_strsub.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
+		ft_addline.c \
 		ft_strsplit.c \
 		ft_itoa.c \
 		ft_putchar.c \
 		ft_putstr.c \
 		ft_putendl.c \
+		ft_putstrtab.c \
 		ft_putnbr.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
@@ -77,14 +79,18 @@ FILE =	ft_memset.c \
 		ft_newlist.c \
 		ft_sorttab.c \
 		ft_swapint.c \
-		ft_swapchar.c
+		ft_swapchar.c \
+		ft_addint.c \
+		ft_sqrt.c \
+		get_next_line.c \
+		ft_strfill.c
 OBJETS = $(FILE:.c=.o)
 HEADER = libft.h
 FLAGS = -Werror -Wextra -Wall
 
 all: $(NAME)
 
-$(NAME):	
+$(NAME):	$(OBJETS)
 			gcc $(FLAGS) -c $(FILE) -I $(HEADER)
 			ar rc $(NAME) $(OBJETS)
 			ranlib $(NAME)
