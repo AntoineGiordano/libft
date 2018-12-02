@@ -1,1 +1,2 @@
-# libft
+Name : libft
+Author : agiordan

@@ -6,7 +6,7 @@
 /*   By: mwaterso <mwaterso@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/03 17:31:57 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/25 13:38:14 by mwaterso    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/27 15:45:37 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -98,6 +98,7 @@ void				ft_sorttab(int *tab, size_t length, int (*f)(int a, int b));
 void				ft_swapint(int *a, int *b);
 void				ft_swapchar(char *a, char *b);
 int					*ft_addint(int *tab, int nbr, size_t length);
+int					**ft_addinttab(int **tab, int *line, size_t length);
 int					ft_sqrt(int nb);
 int					get_next_line(const int fd, char **line);
 void				ft_strfill(void *s, int c, size_t n);

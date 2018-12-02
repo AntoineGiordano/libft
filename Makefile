@@ -6,7 +6,7 @@
 #    By: mwaterso <mwaterso@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/10/03 17:31:01 by agiordan     #+#   ##    ##    #+#        #
-#    Updated: 2018/11/25 13:38:28 by mwaterso    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/11/27 15:45:05 by agiordan    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -81,6 +81,7 @@ FILE =	ft_memset.c \
 		ft_swapint.c \
 		ft_swapchar.c \
 		ft_addint.c \
+		ft_addinttab.c \
 		ft_sqrt.c \
 		get_next_line.c \
 		ft_strfill.c
