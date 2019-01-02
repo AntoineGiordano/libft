@@ -3,7 +3,7 @@
 #                                                               /              #
 #    Makefile                                         .::    .:/ .      .::    #
 #                                                  +:+:+   +:    +:  +:+:+     #
-#    By: mwaterso <mwaterso@student.le-101.fr>      +:+   +:    +:    +:+      #
+#    By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/10/03 17:31:01 by agiordan     #+#   ##    ##    #+#        #
 #    Updated: 2018/11/27 15:45:05 by agiordan    ###    #+. /#+    ###.fr      #
@@ -60,7 +60,7 @@ FILE =	ft_memset.c \
 		ft_putchar.c \
 		ft_putstr.c \
 		ft_putendl.c \
-		ft_putstrtab.c \
+		ft_printtab.c \
 		ft_putnbr.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
