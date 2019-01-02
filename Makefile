@@ -84,15 +84,19 @@ FILE =	ft_memset.c \
 		ft_addinttab.c \
 		ft_sqrt.c \
 		get_next_line.c \
-		ft_strfill.c
+		ft_strfill.c \
+		ft_tablen.c \
+		ft_tabnew.c \
+		ft_tabdel.c
 OBJETS = $(FILE:.c=.o)
 HEADER = libft.h
-FLAGS = -Werror -Wextra -Wall
+FLAGS = -Werror -Wextra -Wall -c
+CC = gcc
 
 all: $(NAME)
 
 $(NAME):	$(OBJETS)
-			gcc $(FLAGS) -c $(FILE) -I $(HEADER)
+			$(CC) $(FLAGS) $(FILE)
 			ar rc $(NAME) $(OBJETS)
 			ranlib $(NAME)
 

@@ -15,9 +15,9 @@
 
 void	ft_printtab(char **tab, size_t length)
 {
-	size_t i;
+	int	i;
 
 	i = -1;
-	while (++i < length)
+	while (++i < (int) length)
 		ft_putendl(tab[i]);
 }
