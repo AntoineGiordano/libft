@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_putstrtab.c                                   .::    .:/ .      .::   */
+/*   ft_printtab.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
@@ -13,7 +13,7 @@
 
 #include "libft.h"
 
-void	ft_putstrtab(char **tab, size_t length)
+void	ft_printtab(char **tab, size_t length)
 {
 	size_t i;
 
