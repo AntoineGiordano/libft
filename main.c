@@ -7,16 +7,28 @@
 int main(void)
 {
 	char **tab;
-	
-	tab = ft_tabnew(16, 35);
-	tab[0][0] = '8';
-	tab[0][1] = '9';
-	
-	ft_printtab(tab, ft_tablen(tab));
-	
-	ft_tabdel(&tab);
-	ft_putendl("Fin");
-	//ft_printtab(tab, ft_tablen(tab));
+	char **newtab;
 
+	tab = ft_tabnew(2, 3);
+	newtab = ft_tabnew(2, 3);
+	ft_strfill(tab[0], 'A', 3);
+	ft_strfill(tab[1], 'B', 3);
+	ft_strfill(newtab[0], 'X', 3);
+	ft_strfill(newtab[1], 'X', 3);
+
+	ft_printtabl(tab);
+	ft_printtabl(newtab);
+
+	if (!(ft_tabcpy(newtab, tab)))
+		ft_putendl("Error");
+
+	ft_printtabl(tab);
+	ft_printtabl(newtab);
+
+	ft_tabdel(&tab);
+	ft_printtabl(tab);
+	ft_printtabl(newtab);
+
+	ft_putendl("Fin");
 	return (0);
 }

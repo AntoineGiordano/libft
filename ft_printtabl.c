@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_tabdel.c                                      .::    .:/ .      .::   */
+/*   ft_printtabl.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/01/07 14:49:14 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/07 16:57:15 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/11/13 18:56:42 by agiordan     #+#   ##    ##    #+#       */
+/*   Updated: 2018/11/13 19:15:36 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_tabdel(char ***tab)
+void	ft_printtabl(char **tab)
 {
 	int	i;
+	int	len;
 
+	len = ft_tablen(tab);
 	i = -1;
-	while ((*tab)[++i])
-		ft_strdel(*tab + i);
-	free(*tab);
-	*tab = NULL;
+	while (++i < len)
+		ft_putendl(tab[i]);
+	ft_putchar('\n');
 }

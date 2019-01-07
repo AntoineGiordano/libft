@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_tabdel.c                                      .::    .:/ .      .::   */
+/*   ft_tabcpy.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/01/07 14:49:14 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/07 16:57:15 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/01/07 14:48:04 by agiordan     #+#   ##    ##    #+#       */
+/*   Updated: 2019/01/07 14:48:06 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_tabdel(char ***tab)
+char	**ft_tabcpy(char **dest, char **src)
 {
-	int	i;
+	size_t	len;
+	size_t	i;
 
 	i = -1;
-	while ((*tab)[++i])
-		ft_strdel(*tab + i);
-	free(*tab);
-	*tab = NULL;
+	if (!dest || !src || (len = ft_tablen(src)) != ft_tablen(dest))
+		return (NULL);
+	while (++i < len)
+	{
+		if (ft_strlen(src[i]) != ft_strlen(dest[i]))
+			return (NULL);
+		ft_strcpy(dest[i], src[i]);
+	}
+	return (dest);
 }
