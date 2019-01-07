@@ -6,7 +6,7 @@
 /*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/01/07 17:09:15 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/07 17:09:18 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/01/07 17:15:23 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 #include "stdio.h"
 #include "stdlib.h"
 
-int main(void)
+int		main(void)
 {
 	char **tab;
 	char **newtab;
