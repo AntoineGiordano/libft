@@ -105,7 +105,7 @@ void				ft_filltabint(int **tab, size_t len, int nbr);
 int					ft_atoi_base(const char *str, int base);
 void				ft_printtab(char **tab);
 void				ft_printtabl(char **tab);
-int					ft_tablen(char **tab);
+int				ft_tablen(char **tab);
 char				**ft_tabnew(size_t nline, size_t lline);
 void				ft_tabdel(char ***tab);
 char				**ft_tabcpy(char **dest, char **src);

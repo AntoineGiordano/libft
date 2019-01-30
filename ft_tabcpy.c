@@ -19,7 +19,7 @@ char	**ft_tabcpy(char **dest, char **src)
 	size_t	i;
 
 	i = -1;
-	if (!dest || !src || (len = ft_tablen(src)) != ft_tablen(dest))
+	if (!dest || !src || (len = ft_tablen(src)) != (size_t)ft_tablen(dest))
 		return (NULL);
 	while (++i < len)
 	{
