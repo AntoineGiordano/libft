@@ -16,7 +16,7 @@ int		ft_sqrt(int nb)
 	int racine;
 
 	racine = -1;
-	while (++racine <= nb / 2)
+	while (++racine * racine <= nb)
 		if (racine * racine == nb)
 			return (racine);
 	return (0);
