@@ -6,12 +6,12 @@
 #    By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/10/03 17:31:01 by agiordan     #+#   ##    ##    #+#        #
-#    Updated: 2019/01/14 08:04:39 by agiordan    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/02/06 20:18:57 by agiordan    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME = libft
 FILE =	ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
@@ -97,20 +97,23 @@ FILE =	ft_memset.c \
 		ft_tabint2del.c \
 		ft_abs.c \
 		ft_isspace.c
-OBJETS = $(FILE:.c=.o)
-HEADER = libft.h
-FLAGS = -Werror -Wextra -Wall -c
+OBJ = $(FILE:.c=.o)
+FLAGS = -Werror -Wextra -Wall
 CC = gcc
 
 all: $(NAME)
 
-$(NAME):	$(OBJETS)
-			$(CC) $(FLAGS) $(FILE)
-			ar rc $(NAME) $(OBJETS)
+
+$(NAME):	$(OBJ)
+			$(CC) $(FLAGS) -c $(FILE)
+			ar rc $@.a $^
 			ranlib $(NAME)
 
+%.o: %.c
+			$(CC) $(FLAGS) -c $< -o $@
+
 clean:
-			rm -f $(OBJETS)
+			rm -f $(OBJ)
 
 fclean: clean
 			rm -f $(NAME)
