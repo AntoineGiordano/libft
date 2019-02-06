@@ -6,14 +6,14 @@
 /*   By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/03 17:31:57 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/14 08:04:22 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/02/06 18:25:15 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define BUFF_SIZE 5
+# define BUFF_SIZE	5
 
 # include <string.h>
 # include <stdlib.h>
@@ -105,7 +105,7 @@ void				ft_filltabint(int **tab, size_t len, int nbr);
 int					ft_atoi_base(const char *str, int base);
 void				ft_printtab(char **tab);
 void				ft_printtabl(char **tab);
-int				ft_tablen(char **tab);
+int					ft_tablen(char **tab);
 char				**ft_tabnew(size_t nline, size_t lline);
 void				ft_tabdel(char ***tab);
 char				**ft_tabcpy(char **dest, char **src);
