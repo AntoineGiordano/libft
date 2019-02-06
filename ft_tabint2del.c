@@ -6,7 +6,7 @@
 /*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/01/10 18:54:01 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/10 19:46:05 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/02/06 16:41:28 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,7 +16,7 @@
 void	ft_tabint2del(int ***tab, size_t len)
 {
 	size_t	i;
-	
+
 	i = -1;
 	if (!tab || !(*tab))
 		return ;
