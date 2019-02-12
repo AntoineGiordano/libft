@@ -6,7 +6,7 @@
 #    By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/10/03 17:31:01 by agiordan     #+#   ##    ##    #+#        #
-#    Updated: 2019/01/14 08:04:39 by agiordan    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/02/12 15:12:06 by agiordan    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -102,23 +102,26 @@ FILE =	ft_memset.c \
 		ft_stristr.c
 OBJETS = $(FILE:.c=.o)
 HEADER = libft.h
-FLAGS = -Werror -Wextra -Wall -c
+FLAGS = -Werror -Wextra -Wall
 CC = gcc
 
-all: $(NAME)
+all:		$(NAME)
 
 $(NAME):	$(OBJETS)
-			$(CC) $(FLAGS) $(FILE)
+			$(CC) $(FLAGS) -c $(FILE)
 			ar rc $(NAME) $(OBJETS)
 			ranlib $(NAME)
+
+%.o:		%.c
+			$(CC) $(FLAGS) -c $<
 
 clean:
 			rm -f $(OBJETS)
 
-fclean: clean
+fclean: 	clean
 			rm -f $(NAME)
 
-re: fclean all
+re: 		fclean all
 
 norme:
 			norminette *.c
