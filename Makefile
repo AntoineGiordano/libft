@@ -96,7 +96,10 @@ FILE =	ft_memset.c \
 		ft_tabintdel.c \
 		ft_tabint2del.c \
 		ft_abs.c \
-		ft_isspace.c
+		ft_isspace.c \
+		ft_strreplace.c \
+		ft_filereplace.c \
+		ft_stristr.c
 OBJETS = $(FILE:.c=.o)
 HEADER = libft.h
 FLAGS = -Werror -Wextra -Wall -c
@@ -116,3 +119,7 @@ fclean: clean
 			rm -f $(NAME)
 
 re: fclean all
+
+norme:
+			norminette *.c
+			norminette *.h

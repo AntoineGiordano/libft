@@ -114,5 +114,8 @@ void				ft_tabintdel(int **tab);
 void				ft_tabint2del(int ***tab, size_t len);
 double				ft_abs(double x);
 int					ft_isspace(int c);
+int					ft_strreplace(char *str, char *target, char *replace);
+int					ft_filereplace(char *file, char *target, char *replace);
+int					ft_stristr(char *str, char *tofind);
 
 #endif

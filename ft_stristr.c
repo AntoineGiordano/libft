@@ -13,22 +13,19 @@
 
 #include "libft.h"
 
-char	*ft_strstr(const char *meule, const char *aiguille)
+int	ft_stristr(char *str, char *tofind)
 {
 	int	i;
+	int	savei;
 
-	if (!aiguille[0])
-		return ((char *)meule);
-	while (*meule)
+	i = -1;
+	while (str[++i])
 	{
-		i = 0;
-		while (meule[i] - aiguille[i] == 0)
-		{
-			i++;
-			if (!aiguille[i])
-				return ((char *)meule);
-		}
-		meule++;
+		savei = i;
+		while (str[i] == tofind[i])
+			if (!tofind[i++])
+				return (savei);
+		i = savei;
 	}
-	return (NULL);
+	return (-1);
 }
