@@ -6,7 +6,7 @@
 /*   By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/01/07 17:09:15 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/02/12 19:20:50 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/02/13 18:27:14 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,11 +17,6 @@
 
 int main(int ac, char **av)
 {
-	char	*line;
-	int		fd;
-
-	line = ft_strdup("Antoine");
-	ft_strreplace(line, ft_strdup("oi"), ft_strdup("1"));
-	printf("%s\n", line);
+	ft_filereplace(av[1], ft_strdup("libmath.h"), ft_strdup("../include/libmath.h"));
 	return (0);
 }
