@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strstr.c                                      .::    .:/ .      .::   */
+/*   ft_stristr.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
+/*   By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/04 20:53:56 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 20:53:57 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/02/12 17:07:53 by agiordan     #+#   ##    ##    #+#       */
+/*   Updated: 2019/02/12 18:41:11 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,16 +16,15 @@
 int	ft_stristr(char *str, char *tofind)
 {
 	int	i;
-	int	savei;
+	int	j;
 
 	i = -1;
 	while (str[++i])
 	{
-		savei = i;
-		while (str[i] == tofind[i])
-			if (!tofind[i++])
-				return (savei);
-		i = savei;
+		j = 0;
+		while (str[i + j] == tofind[j] || !tofind[j])
+			if (!tofind[j++])
+				return (i);
 	}
 	return (-1);
 }
