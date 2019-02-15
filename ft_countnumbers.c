@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   main.c                                           .::    .:/ .      .::   */
+/*   ft_countnumbers.c                                .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: gmonacho <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/01/07 17:09:15 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/02/15 15:14:27 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/11/25 20:23:39 by gmonacho     #+#   ##    ##    #+#       */
+/*   Updated: 2019/02/15 15:08:21 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
-#include "stdlib.h"
 
-int	main(int ac, char **av)
+int		ft_countnumbers(char *str)
 {
 	int	i;
+	int	nb;
 
 	i = 0;
-	while (++i < ac)
-		ft_filereplace(av[i], ft_strdup("D"), ft_strdup("d"));
-	return (0);
+	nb = 0;
+	while (str[i])
+	{
+		if (ft_isdigit(str[i++]))
+		{
+			nb++;
+			while (ft_isdigit(str[i]) && str[i])
+				i++;
+		}
+	}
+	return (nb);
 }
