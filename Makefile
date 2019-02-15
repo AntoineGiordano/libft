@@ -6,7 +6,7 @@
 #    By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/10/03 17:31:01 by agiordan     #+#   ##    ##    #+#        #
-#    Updated: 2019/02/15 17:05:47 by agiordan    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/02/15 20:05:42 by agiordan    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -111,7 +111,6 @@ CC = gcc
 all:		$(NAME)
 
 $(NAME):	$(OBJETS)
-			$(CC) $(FLAGS) -c $(FILE)
 			ar rc $(NAME) $(OBJETS)
 			ranlib $(NAME)
 
