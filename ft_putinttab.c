@@ -3,17 +3,10 @@
 /*                                                              /             */
 /*   ft_putinttab.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-<<<<<<< HEAD:ft_intput.c
-/*   By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/02/13 18:34:15 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2019/02/15 15:31:04 by agiordan    ###    #+. /#+    ###.fr     */
-=======
 /*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/02/15 17:05:55 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/02/15 17:06:06 by agiordan    ###    #+. /#+    ###.fr     */
->>>>>>> refs/remotes/origin/master:ft_putinttab.c
+/*   Created: 2019/02/16 15:50:58 by agiordan     #+#   ##    ##    #+#       */
+/*   Updated: 2019/02/16 15:51:02 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
