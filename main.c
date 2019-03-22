@@ -6,7 +6,7 @@
 /*   By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/01/07 17:09:15 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/02/16 17:20:36 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/03/22 16:10:45 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,10 +17,29 @@
 
 int	main(int ac, char **av)
 {
-	int	i;
+	char	**tab;
 
-	i = 0;
-	while (++i < ac)
-		ft_filereplace(av[i], ft_strdup("vector_2d"), ft_strdup("t_vector_2d"));
+	av = NULL;
+	ac = 0;
+	tab = ft_tabnew(5, 2);
+	tab[0][0] = 'g';
+	tab[4][1] = 'f';
+	printf("%p\n", tab);
+	printf("%p\n", tab[0]);
+	printf("%p\n", tab[1]);
+	printf("%p\n", tab[2]);
+	printf("%p\n", tab[3]);
+	printf("%p\n", tab[4]);
+	
+	ft_tab2del((void ***)(&tab));
+	printf("%p\n", tab);
+	if (tab)
+	{
+		printf("%p\n", tab[0]);
+		printf("%p\n", tab[1]);
+		printf("%p\n", tab[2]);
+		printf("%p\n", tab[3]);
+		printf("%p\n", tab[4]);
+	}
 	return (0);
 }
