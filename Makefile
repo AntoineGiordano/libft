@@ -6,13 +6,15 @@
 #    By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/10/03 17:31:01 by agiordan     #+#   ##    ##    #+#        #
-#    Updated: 2019/03/22 14:49:26 by agiordan    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/04/03 19:56:27 by agiordan    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
 
 NAME = libft.a
-FILE =	ft_memset.c \
+
+SRCS_PATH = 	srcs
+SRCS_FILES =	ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
 		ft_memccpy.c \
@@ -104,21 +106,28 @@ FILE =	ft_memset.c \
 		ft_putinttab.c \
 		ft_countnumbers.c \
 		ft_catinttab.c
-OBJETS = $(FILE:.c=.o)
-FLAGS = -Werror -Wextra -Wall -O3
+SRCS = $(addprefix $(SRCS_PATH)/, $(SRCS_FILES))
+
+OBJS_PATH = objs
+OBJS_FILES = $(SRCS_FILES:.c=.o)
+OBJS = $(addprefix $(OBJS_PATH)/, $(OBJS_FILES))
+
+INCLUDES_PATH = include
+FLAGS = -Werror -Wextra -Wall -I./$(INCLUDES_PATH)
 CC = gcc
 
 all:		$(NAME)
 
-$(NAME):	$(OBJETS)
-			ar rc $(NAME) $(OBJETS)
+$(NAME):	$(OBJS)
+			ar rc $(NAME) $(OBJS)
 			ranlib $(NAME)
 
-%.o:		%.c
-			$(CC) $(FLAGS) -c $<
+$(OBJS_PATH)/%.o : $(SRCS_PATH)/%.c
+			@mkdir $(OBJS_PATH) 2> /dev/null || true
+			$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-			rm -f $(OBJETS)
+			rm -rf $(OBJS_PATH)
 
 fclean: 	clean
 			rm -f $(NAME)
@@ -126,5 +135,5 @@ fclean: 	clean
 re: 		fclean all
 
 norme:
-			norminette *.c
-			norminette *.h
+			@norminette $(SRCS_PATH)
+			@norminette $(INCLUDES_PATH)
