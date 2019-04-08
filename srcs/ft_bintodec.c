@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   main.c                                           .::    .:/ .      .::   */
+/*   ft_bintodec.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/01/07 17:09:15 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/08 19:22:09 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/04/08 18:36:44 by agiordan     #+#   ##    ##    #+#       */
+/*   Updated: 2019/04/08 19:23:02 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-#include <stdlib.h>
 
-int	main(int ac, char **av)
+int		ft_bintodec(int bin)
 {
-	av = NULL;
-	ac = 0;
-	printf("%d\n", ft_bintodec(110010));
-	//printf("%d\n", ft_dectobin(89));
-	return (0);
+	int	dec;
+	int	p;
+
+	dec = 0;
+	p = 1;
+	while (bin)
+	{
+		dec += (bin & 1) * p;
+		bin = (bin - bin % 10) / 10;
+		p *= 2;
+	}
+	return (dec);
 }

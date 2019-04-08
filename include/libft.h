@@ -6,7 +6,7 @@
 /*   By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/03 17:31:57 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/03/22 14:49:57 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/08 18:45:31 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -122,5 +122,7 @@ int					ft_stristr(char *str, char *tofind);
 void				ft_putinttab(int *tab, size_t len);
 int					ft_countnumbers(char *str);
 int					*ft_catinttab(int *tab1, size_t l1, int *tab2, size_t l2);
+int					ft_bintodec(int bin);
+int					ft_dectobin(int dec);
 
 #endif
