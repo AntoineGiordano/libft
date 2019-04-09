@@ -6,7 +6,7 @@
 /*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/07 20:39:44 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/09 19:53:07 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/09 19:58:09 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -22,7 +22,7 @@ static char	convert(int n)
 	return (bases[n]);
 }
 
-char	*ft_lltoa_base(long long n, int base)
+char		*ft_lltoa_base(long long n, int base)
 {
 	char	*str;
 	char	*tmp;
