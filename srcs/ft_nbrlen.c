@@ -6,17 +6,17 @@
 /*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/07 20:44:16 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 20:44:17 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/09 16:28:15 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbrlen(long nbr)
+int	ft_nbrlen(long long nbr)
 {
-	int		count;
-	long	p;
+	int			count;
+	long long	p;
 
 	count = 1;
 	p = 10;

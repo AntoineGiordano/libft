@@ -6,7 +6,7 @@
 /*   By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/03 17:31:57 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/08 18:45:31 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/09 16:12:31 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -89,7 +89,7 @@ void				ft_lstaddback(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
-int					ft_nbrlen(long nbr);
+int					ft_nbrlen(long long nbr);
 void				*ft_memrcpy(void *dest, const void *src, size_t n);
 size_t				ft_lstlen(t_list *first);
 t_list				*ft_newlist(size_t svize);
@@ -124,5 +124,6 @@ int					ft_countnumbers(char *str);
 int					*ft_catinttab(int *tab1, size_t l1, int *tab2, size_t l2);
 int					ft_bintodec(int bin);
 int					ft_dectobin(int dec);
+char				*ft_lltoa(long long n);
 
 #endif
