@@ -6,7 +6,7 @@
 #    By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/10/03 17:31:01 by agiordan     #+#   ##    ##    #+#        #
-#    Updated: 2019/04/09 16:33:47 by agiordan    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/04/09 19:52:06 by agiordan    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -108,7 +108,11 @@ SRCS_FILES =	ft_memset.c \
 		ft_catinttab.c \
 		ft_bintodec.c \
 		ft_dectobin.c \
-		ft_lltoa.c
+		ft_lltoa.c \
+		ft_lltoa_base.c \
+		ft_strrev.c \
+		ft_strtolower.c \
+		ft_strtoupper.c
 SRCS = $(addprefix $(SRCS_PATH)/, $(SRCS_FILES))
 
 OBJS_PATH = objs

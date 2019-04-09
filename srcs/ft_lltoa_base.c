@@ -1,40 +1,52 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_itoa.c                                        .::    .:/ .      .::   */
+/*   ft_lltoa_base.c                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/07 20:39:44 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/09 19:00:40 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/09 19:53:07 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char		*ft_itoa(int n)
+static char	convert(int n)
+{
+	char	*bases;
+
+	bases = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	return (bases[n]);
+}
+
+char	*ft_lltoa_base(long long n, int base)
 {
 	char	*str;
-	int		i;
+	char	*tmp;
+	int		count;
 
-	i = ft_nbrlen(n) + (n < 0 ? 1 : 0);
-	if (!(str = ft_strnew(i)))
-		return (0);
-	if (n == -2147483648)
-	{
-		str[i--] = '8';
-		n = -214748364;
-	}
+	count = 0;
+	str = NULL;
 	if (n < 0)
 	{
+		if (!(str = ft_strnew(++count)))
+			return (NULL);
 		n *= -1;
 		str[0] = '-';
 	}
 	while (n)
 	{
-		str[--i] = n % 10 + '0';
-		n = (n - n % 10) / 10;
+		tmp = str;
+		if (!(str = ft_strnew(++count)))
+			return (NULL);
+		ft_strcpy(str, tmp);
+		ft_strdel(&tmp);
+		str[count - 1] = convert(n % base);
+		n = (n - n % base) / base;
 	}
+	ft_strrev(str + (str[0] == '-' ? 1 : 0));
 	return (str);
 }

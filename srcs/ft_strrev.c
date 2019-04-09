@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strcpy.c                                      .::    .:/ .      .::   */
+/*   ft_strrev.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/04 18:12:47 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/09 19:12:22 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/04/09 19:31:07 by agiordan     #+#   ##    ##    #+#       */
+/*   Updated: 2019/04/09 19:39:07 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+char	*ft_strrev(char *str)
 {
-	size_t i;
+	int	len;
+	int	i;
 
-	if (!dest || !src)
-		return (NULL);
-	i = 0;
-	while (src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	len = ft_strlen(str);
+	i = -1;
+	while (++i < len / 2)
+		ft_swapchar(str + i, str + len - 1 - i);
+	return (str);
 }

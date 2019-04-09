@@ -6,7 +6,7 @@
 /*   By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/03 17:31:57 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/09 16:12:31 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/09 19:51:42 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -125,5 +125,9 @@ int					*ft_catinttab(int *tab1, size_t l1, int *tab2, size_t l2);
 int					ft_bintodec(int bin);
 int					ft_dectobin(int dec);
 char				*ft_lltoa(long long n);
+char				*ft_lltoa_base(long long n, int base);
+char				*ft_strrev(char *str);
+char				*ft_strtolower(char *str);
+char				*ft_strtoupper(char *str);
 
 #endif
