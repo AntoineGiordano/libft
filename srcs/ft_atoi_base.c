@@ -6,7 +6,7 @@
 /*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/01/07 14:24:17 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/07 17:14:57 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/09 20:00:31 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,7 +18,7 @@ static int	is_base(char c, int base)
 	char	*carac_base;
 	int		i;
 
-	carac_base = "0123456789ABCDEFGHIJKLMNOPQURSTUVWXYZ";
+	carac_base = "0123456789abcdefghijklmnopqrstuvwxyz";
 	i = -1;
 	while (++i < base)
 		if (c == carac_base[i] || c == ft_tolower(carac_base[i]))

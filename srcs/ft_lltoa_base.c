@@ -6,7 +6,7 @@
 /*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/07 20:39:44 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/09 19:58:09 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/09 20:00:52 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,7 +18,7 @@ static char	convert(int n)
 {
 	char	*bases;
 
-	bases = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	bases = "0123456789abcdefghijklmnopqrstuvwxyz";
 	return (bases[n]);
 }
 
