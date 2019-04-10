@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   main.c                                           .::    .:/ .      .::   */
+/*   ft_strnext.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/01/07 17:09:15 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/09 21:13:18 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/04/10 13:48:45 by agiordan     #+#   ##    ##    #+#       */
+/*   Updated: 2019/04/10 13:50:17 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int	main(int ac, char **av)
+char	*ft_strnext(char *str)
 {
-	av = NULL;
-	ac = 0;
-	printf("%s\n", ft_lltoa_base(45, 8));
-	return (0);
+	char	*next;
+	int		i;
+
+	i = 0;
+	while (str[i] != ' ' && !(str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (!(next = ft_strsub(str, 0, i)))
+		return (NULL);
+	return (next);
 }

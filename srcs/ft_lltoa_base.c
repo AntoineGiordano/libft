@@ -6,13 +6,12 @@
 /*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/07 20:39:44 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/09 20:00:52 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/09 20:52:10 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static char	convert(int n)
 {
