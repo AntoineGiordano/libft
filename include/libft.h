@@ -6,7 +6,7 @@
 /*   By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/03 17:31:57 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/10 14:48:21 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/11 17:29:38 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -131,5 +131,6 @@ char				*ft_strtolower(char *str);
 char				*ft_strtoupper(char *str);
 char				*ft_strnext(char *str);
 char				*ft_strdelcarac(char *str, char c);
+int					ft_nbrlensign(long long nbr);
 
 #endif
