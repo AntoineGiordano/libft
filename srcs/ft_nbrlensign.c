@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_nbrlen.c                                      .::    .:/ .      .::   */
+/*   ft_nbrlensign.c                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: agiordan <marvin@le-101.fr>                +:+   +:    +:    +:+     */
+/*   By: agiordan <agiordan@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/07 20:44:16 by agiordan     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/11 17:29:01 by agiordan    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/05/30 14:33:39 by agiordan    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbrlen(long long nbr)
+int				ft_nbrlensign(long long nbr)
 {
 	int			count;
 	long long	p;
