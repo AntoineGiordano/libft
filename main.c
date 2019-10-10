@@ -31,7 +31,7 @@ int	main(int ac, char **av)
 		str[i] = 'A';
 	str[i] = '\0';
 	i = -1;
-	while (++i < 100000000)
+	while (++i < 50000000)
 	{
 		if (ft_atoi(av[1]) == 1)
 			tmp = ft_strlen(str);
