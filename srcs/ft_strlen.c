@@ -24,5 +24,5 @@ size_t		ft_strlen(char *str)
 	save = str;
 	while (*str++)
 		;
-	return (str - save);
+	return (str - save - 1);
 }
